@@ -1,0 +1,86 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model TimeTrackingAP.Models.Users
+
+<form asp-antiforgery="true" asp-action="Create" asp-controller="User">
+    <div class="validation" asp-validation-summary="None"></div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="col-lg-3">
+                <label asp-for="Email"></label><br />
+                <input asp-for="Email" />
+                <span asp-validation-for="Email"></span>
+            </div>
+
+            <div class="col-lg-3">
+                <label asp-for="Surname"></label><br />
+                <input type="text" asp-for="Surname" />
+                <span asp-validation-for="Surname"></span>
+            </div>
+            <div class="col-lg-3">
+                <label asp-for="Name"></label><br />
+                <input asp-for="Name" />
+                <span asp-validation-for="Name"></span>
+            </div>
+            <div class="col-lg-3">
+                <label asp-for="Patronymic"></label><br />
+                <input asp-for="Patronymic" />
+                <span asp-validation-for="Patronymic"></span>
+            </div>
+        </div>
+
+
+        <div>
+            <input type="submit" value="Save" />
+        </div>
+    </div>
+</form>
+
+<form asp-antiforgery="true" asp-action="Update" asp-controller="User">
+    <div class="validation" asp-validation-summary="None"></div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="col-lg-3">
+                <label asp-for="Email"></label><br />
+                <input asp-for="Email" />
+                <span asp-validation-for="Email"></span>
+            </div>
+
+            <div class="col-lg-3">
+                <label asp-for="Surname"></label><br />
+                <input type="text" asp-for="Surname" />
+                <span asp-validation-for="Surname"></span>
+            </div>
+            <div class="col-lg-3">
+                <label asp-for="Name"></label><br />
+                <input asp-for="Name" />
+                <span asp-validation-for="Name"></span>
+            </div>
+            <div class="col-lg-3">
+                <label asp-for="Patronymic"></label><br />
+                <input asp-for="Patronymic" />
+                <span asp-validation-for="Patronymic"></span>
+            </div>
+        </div>
+
+
+        <div>
+            <input type="submit" value="Save" />
+        </div>
+    </div>
+</form>
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+@section scripts{
+
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
